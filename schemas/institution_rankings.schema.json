@@ -374,8 +374,7 @@
         "artifact_pct",
         "author_count",
         "conferences",
-        "years",
-        "top_authors"
+        "years"
       ],
       "title": "InstitutionRanking",
       "type": "object"
