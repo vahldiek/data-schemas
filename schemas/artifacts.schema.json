@@ -3,7 +3,7 @@
   "$id": "https://reprodb.github.io/data-schemas/schemas/artifacts.schema.json",
   "title": "Artifact Collection",
   "description": "Array of Artifact records. Each element: A single research artifact associated with a conference paper.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "array",
   "items": {
     "$ref": "#/$defs/Artifact"
@@ -75,6 +75,19 @@
             "type": "string"
           },
           "title": "Artifact Urls",
+          "type": "array"
+        },
+        "artifinder_urls": {
+          "description": "Artifact URLs discovered automatically by ArtiFinder (https://github.com/DistriNet/ArtiFinder) and matched to this paper by title + author list. These links were NOT manually verified by an artifact evaluation committee, carry no badges, and do not contribute to any artifact/reproducibility score. They may, however, be used for repository statistics when they point to a GitHub repo.",
+          "examples": [
+            [
+              "https://github.com/org/discovered-repo"
+            ]
+          ],
+          "items": {
+            "type": "string"
+          },
+          "title": "Artifinder Urls",
           "type": "array"
         },
         "doi": {
